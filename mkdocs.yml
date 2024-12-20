@@ -1,5 +1,5 @@
 site_name: kbellemans
-site_url: https://technomatic.be/kbellemans
+site_url: https://krisbellemans.github.io/tikiwiki
 theme:
   name: material
   plugins:
