@@ -2,6 +2,8 @@ site_name: kbellemans
 site_url: https://krisbellemans.github.io/tikiwiki
 theme:
   name: material
+  palette:
+    primary: indigo
   plugins:
     - search
     - awesome-pages
