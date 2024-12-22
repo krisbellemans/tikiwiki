@@ -1,6 +1,8 @@
 site_name: kbellemans
 site_url: https://krisbellemans.github.io/tikiwiki
 theme:
+  icon:
+    logo: material/rocket-launch-outline
   name: material
   palette:
     #primary: indigo
