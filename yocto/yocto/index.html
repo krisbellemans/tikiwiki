@@ -1,0 +1,776 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://krisbellemans.github.io/tikiwiki/yocto/yocto/">
+      
+      
+        <link rel="prev" href="../../cpp/cpp/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.2">
+    
+    
+      
+        <title>Yocto Knowledge Base - kbellemans</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#yocto-knowledge-base" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="kbellemans" class="md-header__button md-logo" aria-label="kbellemans" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.13 22.19-1.63-3.83c1.57-.58 3.04-1.36 4.4-2.27zM5.64 12.5l-3.83-1.63 6.1-2.77C7 9.46 6.22 10.93 5.64 12.5M19.22 4c.28 0 .53 0 .74.05.17 1.39-.02 4.25-3.3 7.53-1.7 1.71-3.73 3.02-6.01 3.89l-2.15-2.1c.92-2.31 2.23-4.34 3.92-6.03C15.18 4.58 17.64 4 19.22 4m0-2c-1.98 0-4.98.69-8.22 3.93-2.19 2.19-3.5 4.6-4.35 6.71-.28.75-.09 1.57.46 2.13l2.13 2.12c.38.38.89.61 1.42.61.23 0 .47-.06.7-.15A19.1 19.1 0 0 0 18.07 13c5.66-5.66 3.54-10.61 3.54-10.61S20.7 2 19.22 2m-4.68 7.46c-.78-.78-.78-2.05 0-2.83s2.05-.78 2.83 0c.77.78.78 2.05 0 2.83s-2.05.78-2.83 0m-5.66 7.07-1.41-1.41zM6.24 22l3.64-3.64c-.34-.09-.67-.24-.97-.45L4.83 22zM2 22h1.41l4.77-4.76-1.42-1.41L2 20.59zm0-2.83 4.09-4.08c-.21-.3-.36-.62-.45-.97L2 17.76z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            kbellemans
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Yocto Knowledge Base
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="kbellemans" class="md-nav__button md-logo" aria-label="kbellemans" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.13 22.19-1.63-3.83c1.57-.58 3.04-1.36 4.4-2.27zM5.64 12.5l-3.83-1.63 6.1-2.77C7 9.46 6.22 10.93 5.64 12.5M19.22 4c.28 0 .53 0 .74.05.17 1.39-.02 4.25-3.3 7.53-1.7 1.71-3.73 3.02-6.01 3.89l-2.15-2.1c.92-2.31 2.23-4.34 3.92-6.03C15.18 4.58 17.64 4 19.22 4m0-2c-1.98 0-4.98.69-8.22 3.93-2.19 2.19-3.5 4.6-4.35 6.71-.28.75-.09 1.57.46 2.13l2.13 2.12c.38.38.89.61 1.42.61.23 0 .47-.06.7-.15A19.1 19.1 0 0 0 18.07 13c5.66-5.66 3.54-10.61 3.54-10.61S20.7 2 19.22 2m-4.68 7.46c-.78-.78-.78-2.05 0-2.83s2.05-.78 2.83 0c.77.78.78 2.05 0 2.83s-2.05.78-2.83 0m-5.66 7.07-1.41-1.41zM6.24 22l3.64-3.64c-.34-.09-.67-.24-.97-.45L4.83 22zM2 22h1.41l4.77-4.76-1.42-1.41L2 20.59zm0-2.83 4.09-4.08c-.21-.3-.36-.62-.45-.97L2 17.76z"/></svg>
+
+    </a>
+    kbellemans
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to MkDocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Knowledge Base
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cpp
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cpp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/cpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CPP Knowledge Base
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Yocto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Yocto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Yocto Knowledge Base
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Yocto Knowledge Base
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#find-yocto-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find Yocto version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auditd
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auditd">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auditd-recipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auditd recipe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-audit-in-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable Audit in Kernel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kernel-boot-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernel boot parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audit-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit rules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#populate-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Populate SDK
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#find-yocto-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Find Yocto version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auditd
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auditd">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auditd-recipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auditd recipe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-audit-in-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable Audit in Kernel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kernel-boot-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernel boot parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audit-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit rules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#populate-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Populate SDK
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="yocto-knowledge-base">Yocto Knowledge Base</h1>
+<h2 id="find-yocto-version">Find Yocto version</h2>
+<p><code>grep DISTRO_ yocto_dir/poky/meta-poky/conf/distro/poky.conf</code> </p>
+<h2 id="auditd">Auditd</h2>
+<h3 id="auditd-recipe">Auditd recipe</h3>
+<pre><code>git clone git://git.yoctoproject.org/meta-selinux
+cd meta-selinux
+git checkout &lt;current-yocto-release&gt;
+cd yocto_dir/build
+bitbake-layers add-layer yocto_dir/meta-selinux
+echo &quot;IMAGE_INSTALL_append = &quot; auditd&quot; &gt;&gt; conf/local.conf
+bitbake development-image
+</code></pre>
+<h3 id="enable-audit-in-kernel">Enable Audit in Kernel</h3>
+<pre><code>bitbake -c menuconfig virtual/kernel
+
+General setup --&gt; Auditing support
+
+# bitbake -c savedefconfig virtual/kernel
+bitbake virtual/kernel
+</code></pre>
+<h3 id="kernel-boot-parameters">Kernel boot parameters</h3>
+<p><code>cat /proc/cmdline</code></p>
+<p>Check <code>audit=1</code> parameter</p>
+<h3 id="audit-rules">Audit rules</h3>
+<pre><code>-w /etc/passwd -p wa -k passwd_changes
+-w /etc/shadow -p wa -k shadow_changes
+-w /etc/group -p wa -k group_changes
+-a always,exit -F arch=b32 -S execve,execveat -F key=exec_tracking
+-w /bin -p wa -k system_binaries
+-w /sbin -p wa -k system_binaries
+-w /etc/audit -p wa -k audit_config
+-a always,exit -F arch=b32 -S open,creat,openat -F exit=-EACCES -F key=access_denied
+-a always,exit -F arch=b32 -S open,creat,openat -F exit=-EPERM -F key=permission_denied
+-w /var/run/utmp -p wa -k session
+-w /var/log/wtmp -p wa -k session
+-w /var/log/btmp -p wa -k session
+-a always,exclude -F msgtype=CWD
+</code></pre>
+<h2 id="populate-sdk">Populate SDK</h2>
+<p><code>bitbake development-image -c populate_sdk</code></p>
+<p>Results in the following error:</p>
+<pre><code>DEBUG: Executing python function sstate_task_prefunc
+DEBUG: Python function sstate_task_prefunc finished
+DEBUG: Executing python function extend_recipe_sysroot
+NOTE: Direct dependencies are ['virtual:native:/home/kris/workspace/gateway-qemu/acos/poky/meta/recipes-extended/pigz/pigz_2.4.bb:do_populate_sysroot', '/home/kris/workspace/gateway-qemu/acos/poky/meta/recipes-devtools/qemu/qemuwrapper-cross_1.0.bb:do_populate_sysroot', 'virtual:nativesdk:/home/kris/workspace/gateway-qemu/acos/poky/meta/recipes-devtools/qemu/qemuwrapper-cross_1.0.bb:do_populate_sysroot', 'virtual:native:/home/kris/workspace/gateway-qemu/acos/poky/meta/recipes-devtools/opkg/opkg_0.4.2.bb:do_populate_sysroot', 'virtual:native:/home/kris/workspace/gateway-qemu/acos/poky/meta/recipes-devtools/opkg-utils/opkg-utils_0.4.2.bb:do_populate_sysroot', 'virtual:native:/home/kris/workspace/gateway-qemu/acos/poky/meta/recipes-core/update-rc.d/update-rc.d_0.8.bb:do_populate_sysroot', 'virtual:nativesdk:/home/kris/workspace/gateway-qemu/acos/poky/meta/recipes-core/glibc/glibc-locale_2.31.bb:do_populate_sysroot', 'virtual:native:/home/kris/workspace/gateway-qemu/acos/poky/meta/recipes-devtools/makedevs/makedevs_1.0.1.bb:do_populate_sysroot', 'virtual:native:/home/kris/workspace/gateway-qemu/acos/poky/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', 'virtual:native:/home/kris/workspace/gateway-qemu/acos/poky/meta/recipes-extended/xz/xz_5.2.4.bb:do_populate_sysroot', '/home/kris/workspace/gateway-qemu/acos/poky/meta/recipes-core/glibc/cross-localedef-native_2.31.bb:do_populate_sysroot', '/home/kris/workspace/gateway-qemu/acos/poky/meta/recipes-core/glibc/ldconfig-native_2.12.1.bb:do_populate_sysroot']
+NOTE: Installed into sysroot: ['pigz-native', 'qemuwrapper-cross', 'nativesdk-qemuwrapper-cross', 'opkg-native', 'opkg-utils-native', 'update-rc.d-native', 'nativesdk-glibc-locale', 'makedevs-native', 'pseudo-native', 'xz-native', 'cross-localedef-native', 'ldconfig-native', 'quilt-native', 'zlib-native', 'systemd-systemctl-native', 'shadow-native', 'qemu-native', 'patch-native', 'chrpath-native', 'libsolv-native', 'gnu-config-native', 'libarchive-native', 'pkgconfig-native', 'automake-native', 'libtool-native', 'autoconf-native', 'shared-mime-info-native', 'perl-native', 'debianutils-native', 'openssl-native', 'nativesdk-glibc', 'kmod-native', 'depmodwrapper-cross', 'gettext-minimal-native', 'libsdl2-native', 'glib-2.0-native', 'attr-native', 'expat-native', 'cmake-native', 'ninja-native', 'e2fsprogs-native', 'lzo-native', 'bzip2-native', 'texinfo-dummy-native', 'm4-native', 'python3-native', 'libxml2-native', 'itstool-native', 'db-native', 'gdbm-native', 'nativesdk-linux-libc-headers', 'gtk-doc-native', 'libxrandr-native', 'libxext-native', 'libx11-native', 'libxrender-native', 'libpcre-native', 'util-linux-native', 'gettext-native', 'libffi-native', 'meson-native', 'curl-native', 'ncurses-native', 're2c-native', 'readline-native', 'libtirpc-native', 'libnsl2-native', 'sqlite3-native', 'util-macros-native', 'xorgproto-native', 'xtrans-native', 'libxcb-native', 'libpcre2-native', 'libcap-ng-native', 'python3-setuptools-native', 'xcb-proto-native', 'libxau-native', 'libpthread-stubs-native', 'libxdmcp-native', 'unzip-native']
+NOTE: Skipping as already exists in sysroot: []
+DEBUG: sed -e 's:^[^/]*/:/home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/recipe-sysroot-native/:g' /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/quilt-native/fixmepath /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/gnu-config-native/fixmepath /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/pkgconfig-native/fixmepath /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/automake-native/fixmepath /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/libtool-native/fixmepath /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/autoconf-native/fixmepath /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/perl-native/fixmepath /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/openssl-native/fixmepath /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/libsdl2-native/fixmepath /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/glib-2.0-native/fixmepath /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/e2fsprogs-native/fixmepath /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/python3-native/fixmepath /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/libxml2-native/fixmepath /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/itstool-native/fixmepath /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/gtk-doc-native/fixmepath /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/libpcre-native/fixmepath /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/gettext-native/fixmepath /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/curl-native/fixmepath /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/ncurses-native/fixmepath /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/libpcre2-native/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/kris/workspace/gateway-qemu/acos/build/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/kris/workspace/gateway-qemu/acos/build/tmp/pkgdata/qemux86:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/temp/fifo.484304:g'
+DEBUG: sed -e 's:^[^/]*/:/home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/recipe-sysroot/:g' /home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/qemux86/depmodwrapper-cross/fixmepath | xargs sed -i -e 's:FIXMESTAGINGDIRTARGET:/home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/recipe-sysroot:g; s:FIXMESTAGINGDIRHOST:/home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/recipe-sysroot-native:g' -e 's:FIXME_PSEUDO_SYSROOT:/home/kris/workspace/gateway-qemu/acos/build/tmp/sysroots-components/x86_64/pseudo-native:g' -e 's:FIXME_HOSTTOOLS_DIR:/home/kris/workspace/gateway-qemu/acos/build/tmp/hosttools:g' -e 's:FIXME_PKGDATA_DIR:/home/kris/workspace/gateway-qemu/acos/build/tmp/pkgdata/qemux86:g' -e 's:FIXME_PSEUDO_LOCALSTATEDIR:/home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/pseudo/:g' -e 's:FIXME_LOGFIFO:/home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/temp/fifo.484304:g'
+DEBUG: Python function extend_recipe_sysroot finished
+DEBUG: Executing python function do_populate_sdk
+NOTE: Initializing intercept dir for /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/sdk/image/usr/local/oe-sdk-hardcoded-buildpath/sysroots/i586-poky-linux
+DEBUG: Collected intercepts:
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/delay_to_first_boot
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/postinst_intercept
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/update_desktop_database
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/update_font_cache
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/update_gio_module_cache
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/update_gtk_icon_cache
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/update_gtk_immodules_cache
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/update_mime_database
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/update_pixbuf_cache
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/update_udev_hwdb
+
+NOTE: Initializing intercept dir for /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/sdk/image
+DEBUG: Collected intercepts:
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/delay_to_first_boot
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/postinst_intercept
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/update_desktop_database
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/update_font_cache
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/update_gio_module_cache
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/update_gtk_icon_cache
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/update_gtk_immodules_cache
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/update_mime_database
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/update_pixbuf_cache
+  /home/kris/workspace/gateway-qemu/acos/poky/scripts/postinst-intercepts/update_udev_hwdb
+
+NOTE: Installing TARGET packages
+NOTE: Executing '/home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/recipe-sysroot-native/usr/bin/opkg-make-index --checksum md5 --checksum sha256 -r /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/oe-sdk-repo/sdk-provides-dummy-target/Packages -p /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/oe-sdk-repo/sdk-provides-dummy-target/Packages -m /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/oe-sdk-repo/sdk-provides-dummy-target' ...
+NOTE: Executing '/home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/recipe-sysroot-native/usr/bin/opkg-make-index --checksum md5 --checksum sha256 -r /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/oe-sdk-repo/x86_64-nativesdk/Packages -p /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/oe-sdk-repo/x86_64-nativesdk/Packages -m /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/oe-sdk-repo/x86_64-nativesdk' ...
+NOTE: Executing '/home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/recipe-sysroot-native/usr/bin/opkg-make-index --checksum md5 --checksum sha256 -r /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/oe-sdk-repo/all/Packages -p /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/oe-sdk-repo/all/Packages -m /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/oe-sdk-repo/all' ...
+NOTE: Executing '/home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/recipe-sysroot-native/usr/bin/opkg-make-index --checksum md5 --checksum sha256 -r /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/oe-sdk-repo/sdk-provides-dummy-nativesdk/Packages -p /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/oe-sdk-repo/sdk-provides-dummy-nativesdk/Packages -m /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/oe-sdk-repo/sdk-provides-dummy-nativesdk' ...
+NOTE: Executing '/home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/recipe-sysroot-native/usr/bin/opkg-make-index --checksum md5 --checksum sha256 -r /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/oe-sdk-repo/qemux86/Packages -p /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/oe-sdk-repo/qemux86/Packages -m /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/oe-sdk-repo/qemux86' ...
+NOTE: Executing '/home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/recipe-sysroot-native/usr/bin/opkg-make-index --checksum md5 --checksum sha256 -r /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/oe-sdk-repo/i586/Packages -p /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/oe-sdk-repo/i586/Packages -m /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/oe-sdk-repo/i586' ...
+NOTE: Installing the following packages: audit auditd coreutils default-hostname default-ports logrotate openssh-external openssh-external-enable openssh-sshd-cfg-extra opkg packagegroup-base-extended packagegroup-core-boot packagegroup-core-ssh-openssh packagegroup-core-standalone-sdk-target packagegroup-opcua-gw packagegroup-opcua-gw-dev-pkgs polkit run-postinsts sudo target-sdk-provides-dummy users-application
+NOTE: /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/recipe-sysroot-native/usr/bin/opkg --volatile-cache -f /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/opkg.conf -t /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/temp/ipktemp/ -o /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/sdk/image/usr/local/oe-sdk-hardcoded-buildpath/sysroots/i586-poky-linux  --force_postinstall --prefer-arch-to-version   --add-ignore-recommends busybox-syslog install audit auditd coreutils default-hostname default-ports logrotate openssh-external openssh-external-enable openssh-sshd-cfg-extra opkg packagegroup-base-extended packagegroup-core-boot packagegroup-core-ssh-openssh packagegroup-core-standalone-sdk-target packagegroup-opcua-gw packagegroup-opcua-gw-dev-pkgs polkit run-postinsts sudo target-sdk-provides-dummy users-application
+ERROR: Unable to install packages. Command '/home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/recipe-sysroot-native/usr/bin/opkg --volatile-cache -f /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/opkg.conf -t /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/temp/ipktemp/ -o /home/kris/workspace/gateway-qemu/acos/build/tmp/work/qemux86-poky-linux/development-image/1.0-r0/sdk/image/usr/local/oe-sdk-hardcoded-buildpath/sysroots/i586-poky-linux  --force_postinstall --prefer-arch-to-version   --add-ignore-recommends busybox-syslog install audit auditd coreutils default-hostname default-ports logrotate openssh-external openssh-external-enable openssh-sshd-cfg-extra opkg packagegroup-base-extended packagegroup-core-boot packagegroup-core-ssh-openssh packagegroup-core-standalone-sdk-target packagegroup-opcua-gw packagegroup-opcua-gw-dev-pkgs polkit run-postinsts sudo target-sdk-provides-dummy users-application' returned 1:
+Collected errors:
+ * Solver encountered 1 problem(s):
+ * Problem 1/1:
+ *   - package postgresql-12.18-r0.i586 requires perl &gt;= 5.30.1, but none of the providers can be installed
+ * 
+ * Solution 1:
+ *   - do not ask to install a package providing target-sdk-provides-dummy
+
+ * Solution 2:
+ *   - do not ask to install a package providing packagegroup-opcua-gw-dev-pkgs
+
+Disfavor package: busybox-syslog
+
+
+
+DEBUG: Python function do_populate_sdk finished
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f13b1293.min.js"></script>
+      
+    
+  </body>
+</html>
